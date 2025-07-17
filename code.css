@@ -30,12 +30,12 @@ header {
 
 .college-logo {
     height: 70px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .header-text h1 {
     font-size: 1.8rem;
-    font-weight: 800;
+    font-weight: 1000;
     color: #002b5c;
     margin: 0;
 }
@@ -104,7 +104,7 @@ section h2 {
 
 /* --- Hero Section --- */
 .hero-section {
-    min-height: 400px;
+    min-height: 500px;
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://www.geckkd.ac.in/assets/img/Slide5_oLQDWYI.jpg');
     background-size: cover;
     background-position: center;
@@ -236,4 +236,146 @@ section h2 {
 .department-list li a {
     text-decoration: none;
     color: inherit; /* Inherit color from parent for consistency, or set a specific color */
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .college-logo {
+        height: 60px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .header-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .header-text .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .main-container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar on mobile */
+        min-height: auto;
+        padding: 15px 0;
+    }
+
+    .sidebar nav ul {
+        display: flex; /* Make nav items horizontal */
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center; /* Center nav items */
+        padding: 0 10px;
+    }
+
+    .sidebar nav li {
+        margin: 5px 10px; /* Adjust margin for horizontal items */
+    }
+
+    .sidebar nav a {
+        padding: 10px 15px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .sidebar nav a:hover {
+        padding-left: 15px; /* Remove padding-left change on hover for mobile */
+    }
+
+    .content {
+        padding: 20px 15px; /* Adjust padding for content area */
+    }
+
+    section {
+        padding: 30px 20px; /* Adjust section padding */
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-section {
+        min-height: 300px; /* Reduce hero section height on mobile */
+    }
+
+    .helpdesk-title-bar {
+        font-size: 1.3rem;
+        padding: 10px 20px;
+        max-width: 90%;
+    }
+
+    .helpdesk-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack contact cards vertically on mobile */
+        gap: 15px;
+    }
+
+    .contact-card {
+        padding: 15px;
+    }
+
+    .contact-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-card p {
+        font-size: 1rem;
+    }
+
+    .helpdesk-links p {
+        font-size: 1.1rem;
+    }
+
+    .helpdesk-links a {
+        font-size: 1rem;
+    }
+
+    .qr-section {
+        max-width: 200px;
+    }
+}
+
+/* For screens larger than 768px (e.g., desktop and larger tablets) */
+@media (min-width: 769px) {
+    .main-container {
+        flex-direction: row; /* Ensure sidebar and content are side-by-side */
+    }
+
+    .sidebar {
+        width: 240px; /* Fixed width for sidebar on desktop */
+        min-height: calc(100vh - 104px); /* Adjust based on header height */
+    }
+
+    .sidebar nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .content {
+        flex-grow: 1;
+        padding: 40px 50px;
+    }
+
+    .header-content {
+        flex-direction: row;
+        text-align: left;
+    }
 }
