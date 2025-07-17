@@ -217,7 +217,7 @@ section h2 {
 /* --- About and Departments Section --- */
 #about p {
     line-height: 1.7;
-    max-width: 800px;
+    max-width: auto;
 }
 
 .department-list {
