@@ -237,4 +237,72 @@ section h2 {
     text-decoration: none;
     color: inherit; /* Inherit color from parent for consistency, or set a specific color */
 }
+/* --- Media Queries for Responsiveness --- */
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        min-height: auto; /* Adjust min-height for stacked layout */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .sidebar nav ul {
+        display: flex; /* Arrange nav items horizontally on smaller screens */
+        flex-wrap: wrap; /* Allow nav items to wrap */
+        justify-content: center; /* Center nav items */
+    }
+
+    .sidebar nav li {
+        margin: 0 10px 10px 0; /* Add spacing between horizontal nav items */
+    }
+
+    .sidebar nav a {
+        padding: 10px 15px; /* Adjust padding for smaller buttons */
+        font-size: 1rem; /* Decrease font size */
+    }
+
+    .sidebar nav a:hover {
+        padding-left: 15px; /* Remove extra padding on hover in horizontal layout */
+    }
+
+    .content {
+        padding: 20px; /* Adjust padding for main content */
+    }
+
+    section {
+        padding: 30px 20px; /* Adjust section padding */
+    }
+
+    section h2 {
+        font-size: 1.8rem; /* Decrease heading size */
+        margin-bottom: 20px;
+    }
+
+    .helpdesk-title-bar {
+        font-size: 1.4rem; /* Decrease helpdesk title size */
+        padding: 10px 20px;
+        max-width: 90%; /* Adjust max width */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack contact cards vertically */
+    }
+
+    .contact-card {
+        padding: 15px; /* Adjust contact card padding */
+    }
+
+    .contact-card h3 {
+        font-size: 1.1rem; /* Decrease contact card heading size */
+    }
+
+    .contact-card p {
+        font-size: 1rem; /* Decrease contact card text size */
+    }
+}
+
 
