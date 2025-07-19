@@ -243,6 +243,15 @@ section h2 {
     .main-container {
         flex-direction: column; /* Stack sidebar and content vertically */
     }
+    
+    .header-text h1 {
+    font-size: 1.2rem; /* Further decrease header title size on mobile */
+  }
+
+  .header-text .subtitle {
+    font-size: 0.8rem; /* Further decrease header subtitle size on mobile */
+  }
+  /* ... other styles ... */
 
     .sidebar {
         width: 100%; /* Full width on smaller screens */
