@@ -1,0 +1,328 @@
+/* --- General Setup --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef0f2;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- Header --- */
+header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 3px solid #004a99;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes items with space between them */
+    width: 100%; /* Ensures it takes full width of the header */
+}
+
+.college-logo {
+    height: 70px;
+    margin-right: 20px; /* Space between college logo and text */
+}
+
+.header-text {
+    flex-grow: 1; /* Allows the text div to take up available space */
+    text-align: center; /* Centers the text within its flexible space */
+}
+
+.header-text h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #002b5c;
+    margin: 0;
+}
+
+.header-text .subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+/* NSS logo style adjusted for placement after text and on the right */
+.nss-logo {
+    height: 70px; /* Adjust as needed */
+    margin-left: 20px; /* Space between text and NSS logo */
+}
+
+/* --- Main Layout Container --- */
+.main-container {
+    display: flex;
+}
+
+/* --- Sidebar Navigation --- */
+.sidebar {
+    width: 240px;
+    background-color: #2c3e50;
+    padding: 25px 15px;
+    flex-shrink: 0;
+    min-height: calc(100vh - 104px);
+}
+
+.sidebar nav ul { list-style: none; }
+.sidebar nav li { margin-bottom: 10px; }
+.sidebar nav a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar nav a:hover {
+    background-color: #34495e;
+    padding-left: 25px;
+}
+
+.sidebar nav a.active {
+    background-color: #004a99;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* --- Main Content Area --- */
+.content {
+    flex-grow: 1;
+    background-color: #ffffff;
+}
+
+section {
+    padding: 40px 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #002b5c;
+    margin-bottom: 25px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 400px;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://www.geckkd.ac.in/assets/img/Slide5_oLQDWYI.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- KEAM Helpdesk Section --- */
+.helpdesk-section {
+    background-color: #001f3f; /* Dark Navy Blue */
+    color: #ffffff;
+    text-align: center;
+}
+
+.helpdesk-title-bar {
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    border: 3px solid #aa66cc; /* Purple border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-icon {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.helpdesk-section h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    background-color: #9b59b6; /* Purple */
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #55efc4; /* Mint Green border */
+    text-align: center;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.contact-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.helpdesk-links {
+    margin-bottom: 40px;
+}
+
+.helpdesk-links p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.helpdesk-links a {
+    color: #f1c40f; /* Yellow */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.helpdesk-links a:hover {
+    text-decoration: underline;
+}
+
+.qr-section {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.qr-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.qr-section p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.qr-section span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- About and Departments Section --- */
+#about p {
+    line-height: 1.7;
+    max-width: auto;
+}
+
+.department-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.department-list li {
+    background-color: #f4f7f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #004a99;
+    font-size: 1.1rem;
+}
+/* Added rule to remove underline from department links */
+.department-list li a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent for consistency, or set a specific color */
+}
+/* --- Media Queries for Responsiveness --- */
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+    
+    .header-text h1 {
+    font-size: 1.2rem; /* Further decrease header title size on mobile */
+  }
+
+  .header-text .subtitle {
+    font-size: 0.8rem; /* Further decrease header subtitle size on mobile */
+  }
+  /* ... other styles ... */
+
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        min-height: auto; /* Adjust min-height for stacked layout */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .sidebar nav ul {
+        display: flex; /* Arrange nav items horizontally on smaller screens */
+        flex-wrap: wrap; /* Allow nav items to wrap */
+        justify-content: center; /* Center nav items */
+    }
+
+    .sidebar nav li {
+        margin: 0 10px 10px 0; /* Add spacing between horizontal nav items */
+    }
+
+    .sidebar nav a {
+        padding: 10px 15px; /* Adjust padding for smaller buttons */
+        font-size: 1rem; /* Decrease font size */
+    }
+
+    .sidebar nav a:hover {
+        padding-left: 15px; /* Remove extra padding on hover in horizontal layout */
+    }
+
+    .content {
+        padding: 20px; /* Adjust padding for main content */
+    }
+
+    section {
+        padding: 30px 20px; /* Adjust section padding */
+    }
+
+    section h2 {
+        font-size: 1.8rem; /* Decrease heading size */
+        margin-bottom: 20px;
+    }
+
+    .helpdesk-title-bar {
+        font-size: 1.4rem; /* Decrease helpdesk title size */
+        padding: 10px 20px;
+        max-width: 90%; /* Adjust max width */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack contact cards vertically */
+    }
+
+    .contact-card {
+        padding: 15px; /* Adjust contact card padding */
+    }
+
+    .contact-card h3 {
+        font-size: 1.1rem; /* Decrease contact card heading size */
+    }
+
+    .contact-card p {
+        font-size: 1rem; /* Decrease contact card text size */
+    }
+}
